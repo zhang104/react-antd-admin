@@ -1,0 +1,42 @@
+.sider-layout {
+  height: 100vh;
+  color: #fff;
+  .menu {
+    .header {
+      margin: 16px;
+      display: flex;
+      align-items: center;
+      .placeholder {
+        position: relative;
+        aspect-ratio: '212:150';
+        width: calc(32px * 212 / 150);
+      }
+      :global {
+        .ant-typography {
+          color: inherit;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .site {
+    .header {
+      background-color: #fff;
+      padding: 0;
+      .trigger {
+        font-size: 18px;
+        line-height: 64px;
+        padding: 0 24px;
+        cursor: pointer;
+        transition: color 0.3s;
+        &:hover {
+          color: #1890ff;
+        }
+      }
+    }
+    .content {
+      color: #000;
+      padding: 24px;
+    }
+  }
+}
