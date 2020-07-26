@@ -1,4 +1,8 @@
-import { InfoCircleOutlined, LikeOutlined } from "@ant-design/icons"
+import {
+  BarChartOutlined,
+  InfoCircleOutlined,
+  LikeOutlined,
+} from "@ant-design/icons"
 import React from "react"
 
 export interface Route {
@@ -10,6 +14,25 @@ export interface Route {
 }
 
 const basicRoutes: Array<Route> = [
+  {
+    icon: <BarChartOutlined />,
+    key: "charts",
+    name: "图表",
+    children: [
+      {
+        key: "keyboard",
+        name: "键盘图",
+      },
+      {
+        key: "line",
+        name: "折线图",
+      },
+      {
+        key: "mix-chart",
+        name: "混合图",
+      },
+    ],
+  },
   {
     icon: <LikeOutlined />,
     key: "hello-world",

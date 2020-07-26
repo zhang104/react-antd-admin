@@ -10,6 +10,18 @@ const routes: Array<RouteConfig> = [
     component: loadable(() => import("pages/home"), options),
   },
   {
+    path: "/charts/keyboard",
+    component: loadable(() => import("pages/charts/keyboard"), options),
+  },
+  {
+    path: "/charts/line",
+    component: loadable(() => import("pages/charts/line"), options),
+  },
+  {
+    path: "/charts/mix-chart",
+    component: loadable(() => import("pages/charts/mix-chart"), options),
+  },
+  {
     path: "/hello-world",
     component: loadable(() => import("pages/hello-world"), options),
   },
