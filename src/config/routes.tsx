@@ -2,6 +2,7 @@ import {
   BarChartOutlined,
   InfoCircleOutlined,
   LikeOutlined,
+  PaperClipOutlined,
 } from "@ant-design/icons"
 import React from "react"
 
@@ -32,6 +33,11 @@ const basicRoutes: Array<Route> = [
         name: "混合图",
       },
     ],
+  },
+  {
+    icon: <PaperClipOutlined />,
+    key: "clipboard",
+    name: "剪贴板",
   },
   {
     icon: <LikeOutlined />,

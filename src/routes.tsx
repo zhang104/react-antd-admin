@@ -22,6 +22,10 @@ const routes: Array<RouteConfig> = [
     component: loadable(() => import("pages/charts/mix-chart"), options),
   },
   {
+    path: "/clipboard",
+    component: loadable(() => import("pages/clipboard"), options),
+  },
+  {
     path: "/hello-world",
     component: loadable(() => import("pages/hello-world"), options),
   },
