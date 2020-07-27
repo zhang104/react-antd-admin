@@ -22,10 +22,11 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "commit": "git cz",
+    "eject": "react-scripts eject",
+    "start": "react-app-rewired start",
+    "test": "react-app-rewired test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,7 +43,19 @@
       "last 1 safari version"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
     "@types/echarts": "^4.6.3",
     "@types/jest": "^26.0.7",
     "@types/loadable__component": "^5.13.0",
@@ -56,6 +69,8 @@
     "@types/styled-components": "^5.1.1",
     "babel-plugin-import": "^1.13.0",
     "customize-cra": "^1.0.0",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5",
     "node-sass": "^4.14.1",
     "postcss-aspect-ratio": "^1.0.2",
     "react-app-rewired": "^2.1.6",
