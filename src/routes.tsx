@@ -1,7 +1,7 @@
-import loadable from "@loadable/component"
-import { RouteConfig } from "react-router-config"
+import loadable from "@loadable/component";
+import { RouteConfig } from "react-router-config";
 
-import options from "config/@loadable__component"
+import options from "config/@loadable__component";
 
 const routes: Array<RouteConfig> = [
   {
@@ -22,6 +22,14 @@ const routes: Array<RouteConfig> = [
     component: loadable(() => import("pages/charts/mix-chart"), options),
   },
   {
+    path: "/icons",
+    component: loadable(() => import("pages/icons"), options),
+  },
+  {
+    path: "/pdf",
+    component: loadable(() => import("pages/pdf"), options),
+  },
+  {
     path: "/clipboard",
     component: loadable(() => import("pages/clipboard"), options),
   },
@@ -33,6 +41,6 @@ const routes: Array<RouteConfig> = [
     path: "/version/:version",
     component: loadable(() => import("pages/version"), options),
   },
-]
+];
 
-export default routes
+export default routes;

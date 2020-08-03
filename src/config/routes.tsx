@@ -3,15 +3,17 @@ import {
   InfoCircleOutlined,
   LikeOutlined,
   PaperClipOutlined,
-} from "@ant-design/icons"
-import React from "react"
+  InfoOutlined,
+  FilePdfOutlined,
+} from "@ant-design/icons";
+import React from "react";
 
 export interface Route {
-  children?: Route[]
-  icon?: React.ReactNode
-  key: string
-  url?: string
-  name: string
+  children?: Route[];
+  icon?: React.ReactNode;
+  key: string;
+  url?: string;
+  name: string;
 }
 
 const basicRoutes: Array<Route> = [
@@ -35,6 +37,16 @@ const basicRoutes: Array<Route> = [
     ],
   },
   {
+    icon: <InfoOutlined />,
+    key: "icons",
+    name: "图标",
+  },
+  {
+    icon: <FilePdfOutlined />,
+    key: "pdf",
+    name: "PDF",
+  },
+  {
     icon: <PaperClipOutlined />,
     key: "clipboard",
     name: "剪贴板",
@@ -55,20 +67,20 @@ const basicRoutes: Array<Route> = [
       },
     ],
   },
-]
+];
 
 function getRoutes(routes: Array<Route>, parentPath = "") {
   return routes.map((route) => {
     let result: Route = {
       ...route,
       url: `${parentPath}/${route.key}`,
-    }
+    };
     if (route.children) {
-      result.children = getRoutes(route.children, result.url)
-      return result
+      result.children = getRoutes(route.children, result.url);
+      return result;
     }
-    return result
-  })
+    return result;
+  });
 }
 
-export default getRoutes(basicRoutes)
+export default getRoutes(basicRoutes);
